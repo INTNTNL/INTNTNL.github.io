@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>
+	Photos
+</title>
+<link rel="shortcut icon" type="image/x-icon" href="file:///Users/Mazen/Downloads/thimble.ico">
+<style >
+	h1 {text-align: center}
+	</style>
+<body>
+	<h1> <a style="text-decoration:none; color:black; font-style: italic; font-size:275px" href="file:///Users/Mazen/Desktop/INTNTNL.html">PHOTOS</a>
+	 
+	 
+	</body>
+	<div id="randimg"></div>
+	</html>
+	
+
+<div id="imgContainer"><img id="randedIMG" src="" /></div>
+<script type="text/javascript">
+
+var randedIMG = document.getElementById("randedIMG"),
+imageLocation = "file:///Users/Mazen/Downloads/",
+imageArray = new Array(
+    'comfortable-future.gif',
+    'comfortable-future-1.gif',
+    'comfortable-future-2.gif',
+    'comfortable-future-3.gif',
+    'comfortable-future-4.gif',
+    'comfortable-future-5.gif'
+);
+
+function randomizeIMG (imgSwitchDelay) {
+    setTimeout(function(){
+        var n = Math.floor(Math.random()*imageArray.length);
+        var imgName = imageArray[n];
+        randedIMG.src = imageLocation + "/" + imgName;
+        randomizeIMG(3000);
+    }, imgSwitchDelay);
+}
+randomizeIMG(0);
+</script>
+</h1>
